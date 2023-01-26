@@ -1,0 +1,64 @@
+.contenedor
+    {
+        border: 5px solid aquamarine;
+        background-color: slateblue;
+        display: grid; /* creamos una grilla */
+        grid-template-columns: 100px 200px 300px;/* le digo cuantas columnas va a tener y de que ancho serán./*
+        Sabe que va a tener tres columnas porque puse 3 tamaños. 
+        Cuando llega al tercer elemento se crea una nueva fila porque le dije que solo mantenga 3 columnas.
+        Primero llena las columnas y luego las filas*/
+       grid-template-rows: 150px 250px; 
+    }
+.item
+    {
+        border: 5px solid cadetblue;
+        font-size: 4rem;
+    }
+.contenedor2
+    {
+        margin-top: 30px;
+        border: 5px solid aquamarine;
+        background-color: slateblue;
+        display: grid; /* creamos una grilla */
+        grid-template-rows: 100px 200px 300px; /* Especifico que quiero 3 filas 
+        fila 1 = 100px
+        fila 2 = 200px
+        fila 3 = 300px*/
+
+        grid-auto-columns: 150px; /* se define el tamaño que va a tener cualquier columa que se cree, cualquier column (columna) de la grilla tendrá 150px, 
+        funciona igual con las rows(filas) */
+        
+        grid-auto-flow: column; /* cambia el orden de llenado de la grilla. 
+        Sus valores son:
+        por defecto es row ---> Cuando los elementos no caben en lo que he definido, crea filas nuevas
+        dense ---> Si encuentra un huequito en la grilla mete ahí elementos en luhar de ponerlos en filas y columnas
+        column ---> Crea nuevas columnas en lugar de nuevas filas*/
+
+        row-gap: 15px; /* defino el tamaño de la brecha que quiero tener entre rows (filas)*/
+
+        column-gap: 30px; /* defino el tamaño de la brecha que quiero tener entre columns (columnas)*/
+
+        
+    }
+.item2
+    {
+        border: 5px solid cadetblue;
+        font-size: 4rem;
+    }
+.contenedor-reto
+    {
+        border: 5px solid aquamarine;
+        background-color: slateblue;
+        display: grid;
+        gap: 20px; /* defino el tamaño de la brecha que quiero tener entre rows (filas) y columns (columnas)
+        La uso cuando quiero una brecha con el mismo valor entre columns y rows */
+
+        grid-template-rows: 100px 200px 300px;
+        grid-auto-columns: 150px;
+        grid-auto-flow: column;
+    }
+.item-reto
+    {
+        border: 5px solid cadetblue;
+        font-size: 4rem;
+    }

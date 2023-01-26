@@ -1,0 +1,112 @@
+.container
+    {
+        border: 5px solid #e1e1e1;
+        background-color: black;
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        grid-template-rows: 75px 73px 75px;
+        place-content: center;
+    }
+.item
+    {
+        color: aliceblue;
+        border: 2px solid pink;
+        font-size: 4rem;
+    }
+.item-1
+    {
+        background-color: blueviolet;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-column: 1 / 4;
+    }
+.item-2
+    {
+        background-color: darkorchid;
+        grid-row: 2 / 4; /* el primer numero representa el inicio (grid-row-start), el segundo representa el final (grid-row-end) */
+    }
+.item-3
+    {
+        background-color: slateblue;
+        /* grid-column: 2 / 4;
+        grid-row: 2 / 4; así se haría para abarcar las celdas, pero podemos usar grid area */
+        grid-area: 2 / 2 / 4 / 4;
+        /* colocamos la fila en la que comienza, después la columna donde comienza, fila en la que termina, y columna donde termina  */
+    }
+.contenedor
+    {
+        border: 5px solid #e1e1e1;
+        background-color: black;
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        grid-template-rows: 75px 73px 75px;
+        place-content: center;
+        grid-template-areas: 
+        "header header header"
+        "side main main"
+        "side main main";/* sirve para declarar areas dentro de mi grilla. Los 3 celdas que estan en la parte superior de mi grilla se van a llamar header.
+        la primera celda de la segunda row se va a llamar side y las dos celdas contiguas se van a llamar main, lo mismo aplica en la segunda.*/
+    }
+.s
+    {
+        color: aliceblue;
+        border: 2px solid pink;
+        font-size: 4rem;
+    }
+.item-one
+    {
+        background-color: blueviolet;
+        grid-area: header;
+    }
+.item-two
+    {
+        background-color: darkorchid;
+        grid-area: side;
+    }
+.item-three
+    {
+        background-color: slateblue;
+        grid-area: main;
+    }
+.reto
+    {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+        border: 5px solid black;
+        place-content: center;
+    }
+.one
+    {
+        background-color: #5DDAFC;
+    }
+.two
+    {
+        background-color: #50D960;
+        grid-area: 1 / 2 / 1 / 4;
+    }
+.three
+    {
+        background-color: #F0E665;
+        grid-area: 2 / 1 / 2 / 3;
+    }
+.four
+    {
+        background-color: #D99750;
+        grid-column: 3 / 4;
+    }
+.five
+    {
+        background-color: #FC9AAE;
+        grid-column: 2 / 1;
+    }
+.six
+    {
+        background-color: #5DDAFC;
+        grid-column: 2 / 3;
+    }
+.seven
+    {
+        background-color: #50D960;
+        grid-column: 3 / 4;
+    }

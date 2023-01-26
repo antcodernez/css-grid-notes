@@ -1,0 +1,14 @@
+.contenedor
+    {
+        border: 5px solid rebeccapurple;
+        background-color: thistle;
+        display: grid;
+        grid-template-columns: minmax(30px, 300px) 200px minmax(60px, 250px); /* primero va el minimo y despues el segundo */
+        grid-template-rows: repeat(3, auto); /* se va a ajustar dependiendo de las necesidades */
+        /*repeat(3, 100px); así repito 3 veces 100px */
+    }
+.item
+    {
+        border: 5px solid blue;
+        font-size: 2rem;
+    }
